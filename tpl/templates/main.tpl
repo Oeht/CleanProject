@@ -6,13 +6,15 @@
 <title>Beschreibung der Seite</title>
 
 <script type="text/JavaScript" src="js/jQuery/jquery-2.0.0.min.js"></script> 
+<script type="text/JavaScript" src="js/bootstrap/bootstrap.js"></script> 
 <script type="text/JavaScript" src="js/tinyMCE/4.0b2_jquery/jquery.tinymce.min.js"></script>
  
-<link rel="stylesheet" type="text/css" href="tpl/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/jQuery/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/bootstrap/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/main.css">
 </head>
 
-<body>
-{include file=$page}
-</body>
+    <body>
+        {include file=$page}
+    </body>
 </html>
