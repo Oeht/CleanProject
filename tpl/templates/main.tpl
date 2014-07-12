@@ -5,12 +5,13 @@
 <head>
 <title>Beschreibung der Seite</title>
 
-<script type="text/JavaScript" src="js/jQuery/jquery-2.1.1.js"></script> 
-<script type="text/JavaScript" src="js/bootstrap/bootstrap.js"></script> 
-<script type="text/JavaScript" src="js/tinyMCE/4.0b2_jquery/jquery.tinymce.min.js"></script>
+<script type="text/JavaScript" src="js/jQuery-2.1.1/jquery.js"></script> 
+<script type="text/JavaScript" src="js/jQuery-ui-1.11.0/jquery-ui.js"></script> 
+<script type="text/JavaScript" src="js/bootstrap-3.2/bootstrap.js"></script>
+<script type="text/JavaScript" src="js/tinyMCE-4.0b2/4.0b2_jquery/jquery.tinymce.min.js"></script>
  
-<link rel="stylesheet" type="text/css" href="tpl/css/jQuery/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="tpl/css/bootstrap/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/jQuery-ui-1.11.0/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/main.css">
 </head>
 
