@@ -73,8 +73,16 @@
             
             if( isset( $this->GET["page"] ))
                 $this->page = $this->subDir . $this->GET["page"] . ".tpl";
-			else
-				$this->page = $this->subDir . "main.tpl";
+			else{
+            
+                $main = "tpl/templates/" . $this->subDir . "main.tpl";
+                
+                //Zeigt Info wenn Main leer ist
+                if(filesize($main) < 1)
+                    $this->page = $this->subDir . "projectInfo.tpl";
+                else
+                    $this->page = $this->subDir . "main.tpl";
+            }
 		}
         
 		#--------------------------------------------------------------#
