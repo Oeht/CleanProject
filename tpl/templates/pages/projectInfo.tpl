@@ -19,7 +19,7 @@
 <tr>
     <td>jQuery</td>
     <td></td>
-    <td><b>{$jquery_version}</b> (IE 6, 7, 8 nicht supported)</td>
+    <td><b>{$jquery_version}</b>{if substr($jquery_version,0,1) == "2"} (IE 6, 7, 8 nicht supported){/if}</td>
 </tr>
 <tr>
     <td>jQuery-UI</td>
@@ -32,7 +32,8 @@
     <td><b>{$tinyMCE_version}</b></td>
 </tr>
 <tr>
-    <td colspan="3" style="font-size:10px;text-align:center;"><b>leeres Projekt</b> Stand: 12.07.2014</td>
+    <td colspan="3" style="font-size:10px;text-align:center;"><b>leeres Projekt</b> Stand: 12.07.2014<br />
+    (Diese Information wird nur angezeigt weil <span style="font-weight:bold"> main.tpl </span> leer ist)</td>
 </tr>
 </table>
 
