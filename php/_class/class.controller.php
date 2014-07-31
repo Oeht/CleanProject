@@ -34,11 +34,54 @@
             
             $this->pdo                  =   new myPDO();
 		}
-		
+        
+		#--------------------------------------------------------------#
+		#--------------------------------------------------------------#
+        
+        private function debug( $data, $headline = "", $file = false, $detailed = false, $die = false )
+        {
+            if(is_array($data))
+            {
+                echo "<pre>";
+                
+                if(!empty($headline))
+                    echo "<h2>{$headline}</h2>";
+                    
+                if( !$detailed ) {
+                    print_r( $data );
+                }
+                else {
+                    var_dump( $data );
+                }
+                echo "</pre>";
+                
+                if($die)
+                {
+                    die();
+                }
+                
+            }else{
+            
+                if($data == "") $data = "Die &Uuml;bergabe ist leer oder nicht gesetzt!";
+              
+                $div  = "<div style='background:red;position:absolute;top:0px;left:0px;padding:10px;'>";
+                
+                if($file) 
+                    $div .= "<h6 style='color:yellow;'>FILE: " . $file . "</h6>";
+                    
+                $div .= "<h4>Debug-Value:</h4>";
+                $div .= $data;
+                $div .= "</div>";
+                
+                echo $div;
+
+            }
+        }
+        
 		#--------------------------------------------------------------#
 		#--------------------------------------------------------------#
 		
-		function doAction() {
+		public function doAction() {
             
             // Seitensteuerung
             $this->setPage();
@@ -51,7 +94,7 @@
         #--------------------------------------------------------------#
 		#--------------------------------------------------------------#
 		
-		function setTplVars() {
+		public function setTplVars() {
 			
             
             $this->smarty->assign( "smarty_version",    SMARTY_VERSION   );
@@ -66,14 +109,14 @@
         #--------------------------------------------------------------#
 		#--------------------------------------------------------------#
         
-        function startSession() {
+        public function startSession() {
             session_start();
         }
         
         #--------------------------------------------------------------#
 		#--------------------------------------------------------------#
 		
-		function setPage() {
+		public function setPage() {
             
             if( isset( $this->GET["page"] ))
                 $this->page = $this->subDir . $this->GET["page"] . ".tpl";
@@ -92,7 +135,7 @@
 		#--------------------------------------------------------------#
 		#--------------------------------------------------------------#
 		
-		function getPage() {
+		private function getPage() {
             if(!$this->smarty->templateExists($this->page))
                 $this->page = NOT_FOUND;
                 
@@ -103,7 +146,7 @@
 		#--------------------------------------------------------------#
 		#--------------------------------------------------------------#
 		
-		function display() {
+		public function display() {
             $this->smarty->display( $this->mainpage . ".tpl" );
 		}
 
