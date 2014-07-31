@@ -6,7 +6,7 @@
 <title>Beschreibung der Seite</title>
 
 <script type="text/JavaScript" src="js/jQuery-2.1.1/jquery.js"></script> 
-<script type="text/JavaScript" src="js/jQuery-ui-1.11.0/jquery-ui.js"></script> 
+<script type="text/JavaScript" src="js/jQueryUI-1.11.0/jquery-ui.js"></script> 
 <script type="text/JavaScript" src="js/bootstrap-3.2/bootstrap.js"></script>
 <script type="text/JavaScript" src="js/tinyMCE-4.0b2/4.0b2_jquery/jquery.tinymce.min.js"></script>
  
