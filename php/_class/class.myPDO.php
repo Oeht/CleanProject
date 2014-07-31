@@ -9,9 +9,14 @@ class myPDO
     
     function myPDO()
     {
+        $this->POST = false;
+    }
+    
+    public function pdo_init(){
+    
         try
         {
-            $this->dbh = new PDO(PDO_DSN,PDO_USER,PDO_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+            $this->dbh = new PDO( PDO_DSN, PDO_USER, PDO_PASS, array( PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" ) );
         }
         catch (PDOException $e)
         {
@@ -23,7 +28,7 @@ class myPDO
         $this->POST = $_POST;
     }
     
-    function query($sql,$array=array(),$fetchAll=false)
+    function query( $sql, $array=array(), $fetchAll=false )
     {
         $qry_type = explode(" ",$sql);
         $result=false;
