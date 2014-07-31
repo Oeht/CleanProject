@@ -17,15 +17,19 @@
     define( "BOOTSTRAP_VERSION", getLatestVersion("Bootstrap", true) );
     define( "TINYMCE_VERSION",   getLatestVersion("TinyMCE", true)   );
 
-	$latest_smarty_version = "3.1.19";
-
 	# Library-phps
 	#--------------------------------------------------------------#
 	require_once( SMARTY_LATEST . "/libs/Smarty.class.php" 	);
-	require_once( "php/_class/class.controller.php" 	);
+	require_once( "php/_class/class.myPDO.php" 	            );
+	require_once( "php/_class/class.controller.php" 	    );
 	
 	#--------------------------------------------------------------#
 	
+    # Database
+	#------------------------------------------------------------------------#
+    define( "PDO_DSN",      "mysql:host=127.0.0.1;dbname=putDBNameHere" );
+    define( "PDO_USER",     "putUsernameHere"                           );
+    define( "PDO_PASS",     "putPasswordHere"                           );
 	
 	# Constants
 	#--------------------------------------------------------------#
@@ -35,12 +39,8 @@
 	
 	# Pathes
 	#--------------------------------------------------------------#
-	define( "SUB_DIR",      "pages/"    );
-	define( "ERROR_DIR",    "errors/"   );
-	#--------------------------------------------------------------#
-    
-    # Pathes
-	#--------------------------------------------------------------#
+	define( "SUB_DIR",          "pages/"                );
+	define( "ERROR_DIR",        "errors/"               );
 	define( "BAD_REQUEST",	    ERROR_DIR . "400.tpl"   );
 	define( "UNAUTHORIZED",	    ERROR_DIR . "401.tpl"   );
 	define( "FORBIDDEN",        ERROR_DIR . "403.tpl"   );
