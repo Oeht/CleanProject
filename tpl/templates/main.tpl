@@ -9,13 +9,17 @@
 <script type="text/JavaScript" src="js/jQueryUI-1.11.0/jquery-ui.js"></script> 
 <script type="text/JavaScript" src="js/bootstrap-3.2/bootstrap.js"></script>
 <script type="text/JavaScript" src="js/tinyMCE-4.0b2/4.0b2_jquery/jquery.tinymce.min.js"></script>
+<script type="text/JavaScript" src="js/onStartup.js"></script>
  
 <link rel="stylesheet" type="text/css" href="tpl/css/jQuery-ui-1.11.0/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/main.css">
 </head>
 
     <body>
-        {include file=$page}
+        <div class="container">
+            {include file=$page}
+        </div>
     </body>
 </html>
