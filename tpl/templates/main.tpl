@@ -15,6 +15,8 @@
 <link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/main.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/project.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/debug.css">
 </head>
 
     <body>
