@@ -1,0 +1,25 @@
+.debug_red{
+    background: red;
+    outline: 1px dotted black;
+}
+
+.debug_yellow{
+    background: yellow;
+    outline: 1px dotted black;
+}
+
+.debug_green{
+    background: limegreen;
+    outline: 1px dotted blue;
+}
+
+.debug_orange{
+    background: orange;
+    outline: 1px dotted black;
+}
+
+.debug_blue{
+    background: blue;
+    outline: 1px dotted red;
+    color: white;
+}
