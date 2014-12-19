@@ -22,6 +22,7 @@
 	require_once( SMARTY_LATEST . "/libs/Smarty.class.php" 	);
 	require_once( "php/_class/class.myPDO.php" 	            );
 	require_once( "php/_class/class.controller.php" 	    );
+	require_once( "php/_class/class.phpmailer.php" 	        );
 	
 	#--------------------------------------------------------------#
 	

@@ -14,6 +14,7 @@
         private $errorDir;
         
         private $pdo;
+        private $mail;
 		
 		#--------------------------------------------------------------#
 		#--------------------------------------------------------------#
@@ -33,6 +34,7 @@
             $this->subDir               =   SUB_DIR;
             
             $this->pdo                  =   new myPDO();
+            $this->mail                 =   new PHPMailer();
 		}
         
 		#--------------------------------------------------------------#
@@ -97,11 +99,12 @@
 		public function setTplVars() {
 			
             
-            $this->smarty->assign( "smarty_version",    SMARTY_VERSION   );
-            $this->smarty->assign( "jquery_version",    JQUERY_VERSION   );
-            $this->smarty->assign( "jqueryUI_version",  JQUERYUI_VERSION );
-            $this->smarty->assign( "bootstrap_version", BOOTSTRAP_VERSION);
-            $this->smarty->assign( "tinyMCE_version",   TINYMCE_VERSION  );
+            $this->smarty->assign( "smarty_version",    SMARTY_VERSION          );
+            $this->smarty->assign( "jquery_version",    JQUERY_VERSION          );
+            $this->smarty->assign( "jqueryUI_version",  JQUERYUI_VERSION        );
+            $this->smarty->assign( "bootstrap_version", BOOTSTRAP_VERSION       );
+            $this->smarty->assign( "tinyMCE_version",   TINYMCE_VERSION         );
+            $this->smarty->assign( "phpmailer_version", $this->mail->Version    );
 
             $this->smarty->assign( "page",      $this->getPage());
         }

@@ -7,11 +7,6 @@
     <th colspan=3>Projekt Information</th>
 </tr>
 <tr>
-    <td>Smarty</td>
-    <td></td>
-    <td><b>{$smarty_version}</b></td>
-</tr>
-<tr>
     <td>Bootstrap <span class="glyphicon glyphicon-search"></span></td>
     <td></td>
     <td><b>{$bootstrap_version}</b></td>
@@ -27,18 +22,29 @@
     <td><b>{$jqueryUI_version}</b></td>
 </tr>
 <tr>
-    <td>Tiny MCE</td>
-    <td></td>
-    <td><b>{$tinyMCE_version}</b></td>
-</tr>
-<tr>
     <td>PDO</td>
     <td></td>
     <td><b>Zum aktivieren pdo_init() im controller</b></td>
+</tr>
+<tr>
+    <td>PHPMailer</td>
+    <td></td>
+    <td><b>{$phpmailer_version}</b></td>
+</tr>
+<tr>
+    <td>Smarty</td>
+    <td></td>
+    <td><b>{$smarty_version}</b></td>
+</tr>
+<tr>
+    <td>Tiny MCE</td>
+    <td></td>
+    <td><b>{$tinyMCE_version}</b></td>
 </tr>
 <tr>
     <td colspan="3" style="font-size:10px;text-align:center;"><b>leeres Projekt</b> Stand: 12.07.2014<br />
     (Diese Information wird nur angezeigt weil <span style="font-weight:bold"> main.tpl </span> leer ist)</td>
 </tr>
 </table>
+
 
