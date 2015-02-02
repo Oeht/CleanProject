@@ -42,7 +42,7 @@
     <td><b>{$tinyMCE_version}</b></td>
 </tr>
 <tr>
-    <td colspan="3" style="font-size:10px;text-align:center;"><b>leeres Projekt</b> Stand: 12.07.2014<br />
+    <td colspan="3" style="font-size:10px;text-align:center;"><b>leeres Projekt</b> Stand: 02.02.2015<br />
     (Diese Information wird nur angezeigt weil <span style="font-weight:bold"> main.tpl </span> leer ist)</td>
 </tr>
 </table>
