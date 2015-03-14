@@ -35,6 +35,9 @@
             
             $this->pdo                  =   new myPDO();
             $this->mail                 =   new PHPMailer();
+            
+            #fix for same tpl names in different folders
+            $this->smarty->force_compile = true;
 		}
         
 		#--------------------------------------------------------------#
@@ -104,6 +107,7 @@
             $this->smarty->assign( "jqueryUI_version",  JQUERYUI_VERSION        );
             $this->smarty->assign( "bootstrap_version", BOOTSTRAP_VERSION       );
             $this->smarty->assign( "tinyMCE_version",   TINYMCE_VERSION         );
+            $this->smarty->assign( "PNotify_version",   PNOTIFY_VERSION         );
             $this->smarty->assign( "phpmailer_version", $this->mail->Version    );
 
             $this->smarty->assign( "page",      $this->getPage());
@@ -148,9 +152,12 @@
 		
 		#--------------------------------------------------------------#
 		#--------------------------------------------------------------#
-		
-		public function display() {
-            $this->smarty->display( $this->mainpage . ".tpl" );
+        
+        public function display() {
+            if($this->page != '')
+                $this->mainpage = $this->page;
+            
+            $this->smarty->display( 'extends:layout.tpl|resources.tpl|menu.tpl|projectInfo.tpl|main.tpl|' . $this->mainpage );
 		}
 
 	}

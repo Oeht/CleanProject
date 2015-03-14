@@ -1,0 +1,1 @@
+{block name="frontend_content" append}{/block}
