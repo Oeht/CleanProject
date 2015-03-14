@@ -1,0 +1,19 @@
+.frontend_top_container{
+    height:                     150px;
+    padding:                    0px 15px;
+    background:                 #ddd;
+}
+.frontend_left_container{
+
+}
+.frontend_right_container{
+    background:                 #eee;
+}
+.frontend_bottom_container{
+    height:                     100px;
+    padding:                    0px 15px;
+    background:                 #ddd;
+}
+.container{
+    outline:                    1px solid #bbb;
+}

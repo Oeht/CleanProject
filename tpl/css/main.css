@@ -20,46 +20,10 @@ body, html {
     font-family:            Verdana, Helvetica, Tahoma, Arial, sans-serif;
 }
 
-img { border: none; }
-
-div {
-	width:					100%;
-	position:				relative;
-    outline:                0px dotted black;
-}
-
-
-/**************************************************************
-    STRUCTURE
-**************************************************************/
-
-.box {
-
-    margin:					auto;
-    width:					996px;
-    height:                 700px;
-    top:                    20px;
-}
-
-.wrapper{
-
-    width:                  824px;
-    height:                 390px;
-    margin:                 auto;
-    color:                  white;
-    font-size:              12px;
-}
-
-.debugWindow{
-    width:                  500px;
-    padding:                20px;
-    background:             red;
-    color:                  black;
-}
-
 /**************************************************************
     IMAGES
 **************************************************************/
+img { border: none; }
 
 .errorPage_404{
     text-align:     center;
@@ -69,17 +33,6 @@ div {
     height:         100%;
 }
 
-/**************************************************************
-    MISC
-**************************************************************/
-
-.googlemap{
-
-    width:                  450px;
-    float:                  left;
-    text-align:             center;
-    margin-top:             5px;
-}
 
 /**************************************************************
     SPACER
