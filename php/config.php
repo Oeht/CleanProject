@@ -43,10 +43,10 @@
 	#--------------------------------------------------------------#
 	define( "SUB_DIR",          "pages/"                );
 	define( "ERROR_DIR",        "errors/"               );
-	define( "BAD_REQUEST",	    ERROR_DIR . "400.tpl"   );
-	define( "UNAUTHORIZED",	    ERROR_DIR . "401.tpl"   );
-	define( "FORBIDDEN",        ERROR_DIR . "403.tpl"   );
-	define( "NOT_FOUND",        ERROR_DIR . "404.tpl"   );
+	define( "BAD_REQUEST",	    ERROR_DIR . "400"       );
+	define( "UNAUTHORIZED",	    ERROR_DIR . "401"       );
+	define( "FORBIDDEN",        ERROR_DIR . "403"       );
+	define( "NOT_FOUND",        ERROR_DIR . "404"       );
 
 	#--------------------------------------------------------------#
     

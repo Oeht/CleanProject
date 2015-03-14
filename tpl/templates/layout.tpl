@@ -13,26 +13,26 @@
     <body>
     <div class="container">
         <div class="row">
-        <div class="frontend_top_container">
-        {block name="frontend_top_container"}
-            TOP
-        {/block}
-        </div>
+            <div class="frontend_top_container">
+            {block name="frontend_top_container"}
+                TOP
+            {/block}
+            </div>
         </div>
         <div class="row-fluid">
-        <div class="row">
-            <div class="frontend_left_container col-md-3">
-            {block name="frontend_left_container"}
-                LEFT
-            {/block}
+            <div class="row">
+                <div class="frontend_left_container col-md-3">
+                {block name="frontend_left_container"}
+                    LEFT
+                {/block}
+                </div>
+                <div class="frontend_right_container col-md-9">
+                {block name="frontend_right_container"}
+                    <h4>{block name="frontend_content_header"}frontend_content_header: empty{/block}</h4>
+                    {block name="frontend_content"}frontend_content: empty{/block}
+                {/block}
+                </div>
             </div>
-            <div class="frontend_right_container col-md-9">
-            {block name="frontend_right_container"}
-                <h4>{block name="frontend_content_header"}frontend_content_header: empty{/block}</h4>
-                {block name="frontend_content"}frontend_content: empty{/block}
-            {/block}
-            </div>
-        </div>
         </div>
         <div class="row">
             <div class="frontend_bottom_container">

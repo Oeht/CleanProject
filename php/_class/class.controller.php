@@ -10,6 +10,7 @@
         private $display;
 		private $smarty;
         
+        private $section;
         private $subDir;
         private $errorDir;
         
@@ -25,13 +26,13 @@
             $this->POST                 =   $_POST;
             $this->FILES                =   $_FILES;
             
-            $this->mainpage             =   "main";
-            
 			$this->smarty				=	new Smarty();
 			$this->smarty->template_dir	=	TEMPLATE_DIR;
 			$this->smarty->compile_dir	=	COMPILE_DIR;
             
             $this->subDir               =   SUB_DIR;
+            
+            $this->section              =   false;
             
             $this->pdo                  =   new myPDO();
             $this->mail                 =   new PHPMailer();
@@ -83,6 +84,54 @@
             }
         }
         
+        #--------------------------------------------------------------#
+		#--------------------------------------------------------------#
+        
+        public function startSession() {
+            session_start();
+        }
+        
+        #--------------------------------------------------------------#
+		#--------------------------------------------------------------#
+		
+		public function setPage() {
+            
+            if( isset( $this->GET["page"] ) )
+            {
+                $this->page = $this->GET["page"];
+                
+                if( isset( $this->GET["section"] ) )
+                {
+                    $this->section = $this->GET["section"];
+                }
+			}
+            else
+            {
+                $this->page = "main";
+            }
+		}
+        
+        #--------------------------------------------------------------#
+		#--------------------------------------------------------------#
+		
+		private function getPage() {
+            
+            $page = $this->getFullPagePath();
+            
+            if(!$this->smarty->templateExists($page))
+                $this->page = NOT_FOUND;
+                
+            return $this->page;
+		}
+        
+        #--------------------------------------------------------------#
+		#--------------------------------------------------------------#
+        
+        private function getFullPagePath(){
+            
+            return $this->subDir.($this->section?$this->section."/".$this->page:$this->page).".tpl";
+        }
+        
 		#--------------------------------------------------------------#
 		#--------------------------------------------------------------#
 		
@@ -110,54 +159,14 @@
             $this->smarty->assign( "PNotify_version",   PNOTIFY_VERSION         );
             $this->smarty->assign( "phpmailer_version", $this->mail->Version    );
 
-            $this->smarty->assign( "page",      $this->getPage());
         }
-		
-        #--------------------------------------------------------------#
-		#--------------------------------------------------------------#
-        
-        public function startSession() {
-            session_start();
-        }
-        
-        #--------------------------------------------------------------#
-		#--------------------------------------------------------------#
-		
-		public function setPage() {
-            
-            if( isset( $this->GET["page"] ))
-                $this->page = $this->subDir . $this->GET["page"] . ".tpl";
-			else{
-            
-                $main = "tpl/templates/" . $this->subDir . "main.tpl";
-                
-                //Zeigt Info wenn Main leer ist
-                if(filesize($main) < 1)
-                    $this->page = $this->subDir . "projectInfo.tpl";
-                else
-                    $this->page = $this->subDir . "main.tpl";
-            }
-		}
-        
-		#--------------------------------------------------------------#
-		#--------------------------------------------------------------#
-		
-		private function getPage() {
-            if(!$this->smarty->templateExists($this->page))
-                $this->page = NOT_FOUND;
-                
-            return $this->page;
-		}
-        
 		
 		#--------------------------------------------------------------#
 		#--------------------------------------------------------------#
         
         public function display() {
-            if($this->page != '')
-                $this->mainpage = $this->page;
             
-            $this->smarty->display( 'extends:layout.tpl|resources.tpl|menu.tpl|projectInfo.tpl|main.tpl|' . $this->mainpage );
+            $this->smarty->display( 'extends:layout.tpl|resources.tpl|menu.tpl|projectInfo.tpl|main.tpl|' . $this->getFullPagePath() );
 		}
 
 	}
