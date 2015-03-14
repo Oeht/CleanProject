@@ -4,10 +4,11 @@
     background:                 #ddd;
 }
 .frontend_left_container{
-
+    padding:                    15px;
 }
 .frontend_right_container{
     background:                 #eee;
+    padding:                    15px;
 }
 .frontend_bottom_container{
     height:                     100px;
