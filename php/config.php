@@ -16,6 +16,7 @@
     define( "JQUERYUI_VERSION",  getLatestVersion("jQueryUI", true)  );
     define( "BOOTSTRAP_VERSION", getLatestVersion("Bootstrap", true) );
     define( "TINYMCE_VERSION",   getLatestVersion("TinyMCE", true)   );
+    define( "PNOTIFY_VERSION",   getLatestVersion("PNotify", true)   );
 
 	# Library-phps
 	#--------------------------------------------------------------#

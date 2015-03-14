@@ -33,6 +33,7 @@
         $searchString['jQueryUI']   = "js/jQueryUI-*";
         $searchString['Bootstrap']  = "js/bootstrap-*";
         $searchString['TinyMCE']    = "js/tinyMCE-*";
+        $searchString['PNotify']    = "js/PNotify-*";
        
         $versions = glob($searchString[$type]);
 
