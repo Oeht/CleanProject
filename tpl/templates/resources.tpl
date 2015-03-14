@@ -21,10 +21,10 @@
 <link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap-select.min.css">
 <link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap-theme.min.css">
-<link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/datepicker3.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/bootstrap-3.2/bootstrap-datepicker3.css">
 
 <!-- Plugin CSS Files -->
-<link rel="stylesheet" type="text/css" href="tpl/css/plugins/pnotify.custom.min.css">
+<link rel="stylesheet" type="text/css" href="tpl/css/PNotify-2.0/pnotify.custom.min.css">
 
 <!-- Custom CSS Files -->
 <link rel="stylesheet" type="text/css" href="tpl/css/main.css">
