@@ -166,7 +166,7 @@
         
         public function display() {
             
-            $this->smarty->display( 'extends:layout.tpl|resources.tpl|menu.tpl|projectInfo.tpl|main.tpl|' . $this->getFullPagePath() );
+            $this->smarty->display( 'extends:layout.tpl|resources.tpl|menu.tpl|projectInfo.tpl|' . $this->getFullPagePath() );
 		}
 
 	}

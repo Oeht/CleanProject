@@ -5,7 +5,7 @@
 <head>
 <title>
 {block name="frontend_page_title"}
-    Beschreibung der Seite
+    frontend_page_title: empty
 {/block}
 </title>
 {block name="frontend_resource_files"}{/block}
@@ -15,7 +15,7 @@
         <div class="row">
             <div class="frontend_top_container">
             {block name="frontend_top_container"}
-                TOP
+                frontend_top_container: empty
             {/block}
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="frontend_left_container col-md-3">
                 {block name="frontend_left_container"}
-                    LEFT
+                    frontend_left_container: empty
                 {/block}
                 </div>
                 <div class="frontend_right_container col-md-9">
@@ -37,7 +37,7 @@
         <div class="row">
             <div class="frontend_bottom_container">
             {block name="frontend_bottom_container"}
-                BOTTOM
+                frontend_bottom_container: empty
             {/block}
             </div>
         </div>
