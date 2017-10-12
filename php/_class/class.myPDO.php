@@ -7,7 +7,7 @@ class myPDO
     private $POST;
     
     
-    function myPDO()
+    function __construct()
     {
         $this->POST = false;
     }
